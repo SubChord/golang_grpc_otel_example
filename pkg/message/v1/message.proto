@@ -1,0 +1,17 @@
+syntax = "proto3";
+package pkg.aptr_proto;
+
+option go_package = "grpc_example/pkg/message;message";
+
+service MessageService {
+  rpc Send(MessageRequest) returns (MessageResponse);
+}
+
+message MessageRequest {
+  string Message = 1;
+}
+
+message MessageResponse {
+  string Response = 1;
+}
+
